@@ -18,9 +18,13 @@ $(document).ready(function(){
 
       event.preventDefault();
 
+     
       var event = $("#event").val(); 
       var address = $("#address").val(); 
       var distance = $("#distance").val();
+
+      //clears table for new search
+      $("#eventTable tbody > tr").remove();
 
       var token = "JQ3JH254MIWDMTVGA3ZK";
 
@@ -48,18 +52,22 @@ $(document).ready(function(){
         // name, url, start and end times.
         for (var i = 0; i < 3; i++) {
           var tRow = $("<tr>");
-          var url = ("<a href>" + events[i].url + "</a>");
+          var url = $("<a href>" + events[i].url + "</a>");
           tRow.append(
             $("<td>").text(events[i].name.text),  
             $("<td>").html(url),
+            //$("<td>").html("<a href>" + events[i].url + "</a>"),
             $("<td>").text(events[i].start.local),
             $("<td>").text(events[i].end.local),
             // If you want more fields, add them here. Don't forget to
             // update the index.html file to add the additional table
             // headers.
           );
+          
 
           $("#eventTable").append(tRow);
+         
+           
         }
 
         eventDB.push({
@@ -72,12 +80,22 @@ $(document).ready(function(){
         $("#event").val("");
         $("#address").val("");
         $("#distance").val("");
+        
+        
+         
 
       })
+      
+      
 
     });
 
+    
 });
+
+//$(url).click(function(){
+ // window.open("<a href>" + events[i].url + "</a>");
+//});
 
 var map;
     var directionsManager;
