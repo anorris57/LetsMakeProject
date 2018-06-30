@@ -49,10 +49,10 @@ $(document).ready(function(){
         // name, url, start and end times.
         for (var i = 0; i < 3; i++) {
           var tRow = $("<tr>");
-          var url = $("<td>").attr("href", url);
+          var url = ("<a href>" + events[i].url + "</a>");
           tRow.append(
             $("<td>").text(events[i].name.text),  
-            $("<td>").text(events[i].url),
+            $("<td>").html(url),
             $("<td>").text(events[i].start.local),
             $("<td>").text(events[i].end.local),
             // If you want more fields, add them here. Don't forget to
