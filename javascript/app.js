@@ -23,6 +23,9 @@ $(document).ready(function(){
       var address = $("#address").val(); 
       var distance = $("#distance").val();
 
+      //clears table for new search
+      $("#eventTable tbody > tr").remove();
+
       var token = "JQ3JH254MIWDMTVGA3ZK";
 
       var queryURL = "https://www.eventbriteapi.com/v3/events/search/?"
