@@ -1,151 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Event Finder</title>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-
+  <!-- Moment.js Reference -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!--<link rel="stylesheet" type="text/css" href="assets/css/style.css">-->
+  <style>
+    /* SHETIA WAS HERE */
+  /* Make the image fully responsive */
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  </style>
 </head>
-
 <body>
+  
+<div class="container mt-3 text-center">
 
-  <div class="container mt-3 text-center">
+
     <div class="jumbotron text-center bg-dark text-white">
-      <h2>Find Events Near You</h2>
+        <h2>Find Events Near You</h2>
     </div>
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-      <!-- Indicators -->
-      <ul class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ul>
 
-      <!-- The slideshow -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="assets/images/first.jpg" alt="Events" width="1100" height="500">
-        </div>
-        <div class="carousel-item">
-          <img src="assets/images/second.jpg" alt="Concerts" width="1100" height="500">
-        </div>
-        <div class="carousel-item">
-          <img src="assets/images/third.jpg" alt="Sports" width="1100" height="500">
-        </div>
-      </div>
+ 
 
-      <!-- Left and right controls -->
-      <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
+
+
+
+
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/images/first.jpg" alt="Events" width="1100" height="500">
     </div>
-  </div>
-
-  <br>
-  <br>
-
-  <!--Search form-->
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-
-        <div class="form-group">
-          <label for="search">Search Events</label>
-          <input type="text" class="form-control" id="search" placeholder="Title or Keyword">
-        </div>
-        <div class="form-group">
-          <label for="location">Location - City, State or Zip</label>
-          <input type="text " class="form-control" id="location" placeholder="Savannah, Ga 31401">
-        </div>
-
-        <div class="form-group">
-          <label for="radius">Select mile radius:</label>
-          <select class="form-control" id="radius">
-            <option>25</option>
-            <option>50</option>
-            <option>75</option>
-            <option>100</option>
-          </select>
-        </div>
-        <button class="btn btn-primary" id="submit-button">Submit</button>
-
-      </div>
-
-      <!--ID #info-display where info displays after clicking Submit-->
-      <div class="col-sm-8">
-        <table class="table" id "info-display">
-          <thead class="thead text-black bg-light mb-3">
-            <tr>
-              <th>#</th>
-              <th>Event</th>
-              <th>Location</th>
-              <th>Within # Miles</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>1.</th>
-            </tr>
-            <tr>
-              <th>2.</th>
-            </tr>
-            <tr>
-              <th>3.</th>
-            </tr>
-            <tr>
-              <th>4.</th>
-            </tr>
-            <tr>
-              <th>5.</th>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="carousel-item">
+      <img src="assets/images/second.jpg" alt="Concerts" width="1100" height="500">
     </div>
-  </div>
+    <div class="carousel-item">
+      <img src="assets/images/third.jpg" alt="Sports" width="1100" height="500">
+    </div>
   </div>
   
-  <br>
-  <br>
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
 
-  <!--Map Div ID #map-images  (Where the maps will display-->
-  <div class="container">
-    <div class="card-header bg-light mb-3 text-black text-center">
-      <h2>Search Results</h2>
+</div>
+
+
+<br>
+<br>
+
+
+<div class="container">
+  <section>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro veritatis commodi itaque? Debitis placeat ex deleniti minima eius at vel ab eum est porro exercitationem, harum nesciunt tempora, laudantium enim.</p>
+    <div class="row">
+    <div class="col-sm-3">
+
+
+        <form action="/action_page.php">
+          <div class="form-group">
+            <label for="events">Search Events</label>
+            <input type="text" class="form-control" id="event">
+          </div>
+          <div class="form-group">
+            <label for="location">Pick a location</label>
+            <input type="text" class="form-control" id="address">
+          </div>
+          
+          <div id="distance">
+            </div>
+          <button type="submit" id="searchEvents">Submit</button>
+        </form>
+
+
+
     </div>
-    <div class="card border-dark mb-3">
-      <div class="row">
-        <div class="col-sm-6">
-          <img class="img-responsive" id="map-images" src="assets/images/google.jpg">
-        </div>
-        <div class="col-sm-6">
-          <!--Name of Event and Address Div ID #event-address (Where Event and Address will display next to map)-->
-          <table class="table" id "event-address">
+
+    <div class="col-sm-9">
+
+
+        <table class="table" id = "eventTable">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col" id="Event">Event</th>
+                <th scope="col" id="URL">URL</th>
+                <th scope="col" id="Start">Start Time</th>
+                <th scope="col" id="End">End Time</th>
+              </tr>
+            </thead>
             <tbody>
-              <tr>
-                <th>Event:</th>
-              </tr>
-              <tr>
-                <th>Address:</th>
-              </tr>
+              
             </tbody>
           </table>
-        </div>
-      </div>
+          <div id="events-view">
+
+          </div>
+          
+          
+
+
+
     </div>
-  </div>
+
+
+  </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+<script>
+ 
+</script>
+
+</div>
+</div>
 
 </body>
-
 </html>
