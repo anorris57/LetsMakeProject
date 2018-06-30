@@ -7,102 +7,143 @@
   <!-- Moment.js Reference -->
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
-
   <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key= AsJHeKGXP8aLdq8yvdYv4zwcbF_9EO6vzUyVyMLZlzSzG7Pmvj5yVqZcd1u9iZfS' async defer></script>
+
+
+ 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
 </head>
 
+
+
 <body>
-  
-<div class="container mt-3 text-center">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<div class="container">
+<a class="navbar-brand" href="#">Find Events In Your</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item active">
+<a class="nav-link" href="#">Home
+<span class="sr-only">(current)</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">Services</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<br>
+<br>
+
+<section class="py-5">
+
+<div class="container">
+<div class="autoplay" id="slider">
+<div>
+<img src="images/concert.jpg" alt="Concert" width="1100" height="250" />
+</div>
+<div>
+<img src="images/art.jpg" alt="Art" width="1100" height="250" />
+</div>
+<div>
+<img src="images/festival.jpg" alt="Festival" width="1100" height="250" />
+</div>
+<div>
+<img src="images/sports.jpg" alt="Sports" width="1100" height="250" />
+</div>
+</div>
+</div>
 
 
-    <div class="jumbotron text-center bg-dark text-white">
-        <h2>Events Near You!</h2>
-    </div>
+<div class="container">
+<form action="/action_page.php">
+<div class="form-group">
+<label for="events">Search Events</label>
+<input type="text" class="form-control" id="event">
+</div>
+<div class="form-group">
+<label for="location">Pick a location</label>
+<input type="text" class="form-control" id="address">
+</div>
 
-    <div class="autoplay" id="slider">
-
-
-      <div>
-        <img src="images/concert.jpg" alt="Concert" width="1100" height="250" />
-      </div>
-      <div>
-        <img src="images/art.jpg" alt="Concert" width="1100" height="250" />
-      </div>
-      <div>
-        <img src="images/festival.jpg" alt="Concert" width="1100" height="250" />
-      </div>
-      <div>
-        <img src="images/sports.jpg" alt="Concert" width="1100" height="250" />
-      </div>
-
-    </div>
+<div id="distance">
+</div>
+<button type="submit" id="searchEvents">Submit</button>
+</form>
+</div>
+</section>
 
 
+<section>
+<div class="container">
+<table class="table" id="eventTable">
+<thead class="thead-dark">
+<tr>
+<th scope="col" id="Event">Event</th>
+<th scope="col" href id="URL">URL</th>
+<th scope="col" id="Start">Start Time</th>
+<th scope="col" id="End">End Time</th>
+</tr>
+</thead>
+<tbody>
+                            
+</tbody>
+</table>
+<div id="events-view">
 
-    <div class="container">
-      <section>
-        <h1>Looking for somthing to do?</h1>
-        <h1>Tired of those sites that give you events but send you somewhere else for directions?</h1>
-         <p>Let Events Near You help you find just the right event to attend and then find directions by entering the evant address.</p>
-        <div class="row">
-          <div class="col-sm-3">
-
-            <form action="/action_page.php">
-              <div class="form-group">
-                <label for="events">Search Events</label>
-                <input type="text" class="form-control" id="event">
-              </div>
-              <div class="form-group">
-                <label for="location">Pick a location</label>
-                <input type="text" class="form-control" id="address">
-              </div>
-
-              <div id="distance">
-              </div>
-              <button type="submit" id="searchEvents">Submit</button>
-            </form>
-
-          </div>
-
-          <div class="col-sm-6">
+</div> 
+</div>
+</section>
 
 
-            <table class="table" id="eventTable">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col" id="Event">Event</th>
-                  <th scope="col" href id="URL">URL</th>
-                  <th scope="col" id="Start">Start Time</th>
-                  <th scope="col" id="End">End Time</th>
-                </tr>
-              </thead>
-              <tbody>
-
-              </tbody>
-            </table>
-            <div id="events-view">
-
-            </div>
 
 
-          </div>
+<section>
+<div class="container">
+<div class="row">
+<div class="directionsContainer col-sm-6">
+<div id="directionsPanel"></div>
+<div id="directionsItinerary"></div>
+</div>
+<div class="col-sm-6" id="myMap"></div>
+</div>
+</div>
 
-          <div>
 
-            <div class="directionsContainer">
-              <div id="directionsPanel"></div>
-              <div id="directionsItinerary"></div>
-            </div>
-            <div id="myMap"></div>
+</section>
+<br>
+<br>
+<br>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+  </div>
+  <!-- /.container -->
+</footer>
 
 
-          </div>
+
+
 
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -112,7 +153,19 @@
 <script type="text/javascript" src="javascript/app.js"></script>
 <script type="text/javascript" src="javascript/scriptSlider.js"></script>
 
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="slick/slick.min.js"></script>
+      <script type="text/javascript" src="javascript/app.js"></script>
+      <script type="text/javascript" src="javascript/scriptSlider.js"></script>
+      
+
+
       
 
 </body>
-</html>

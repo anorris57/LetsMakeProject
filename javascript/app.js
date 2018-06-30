@@ -19,7 +19,6 @@ $(document).ready(function(){
 
       event.preventDefault();
 
-     
       var event = $("#event").val(); 
       var address = $("#address").val(); 
       var distance = $("#distance").val();
@@ -57,18 +56,12 @@ $(document).ready(function(){
           tRow.append(
             $("<td>").text(events[i].name.text),  
             $("<td>").html(url),
-            //$("<td>").html("<a href>" + events[i].url + "</a>"),
             $("<td>").text(events[i].start.local),
             $("<td>").text(events[i].end.local),
-            // If you want more fields, add them here. Don't forget to
-            // update the index.html file to add the additional table
-            // headers.
+            
           );
-          
-
+       
           $("#eventTable").append(tRow);
-         
-           
         }
 
         eventDB.push({
@@ -81,22 +74,13 @@ $(document).ready(function(){
         $("#event").val("");
         $("#address").val("");
         $("#distance").val("");
-        
-        
-         
 
       })
-      
-      
 
     });
 
 
 });
-
-//$(url).click(function(){
- // window.open("<a href>" + events[i].url + "</a>");
-//});
 
 var map;
 
