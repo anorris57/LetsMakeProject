@@ -6,6 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Moment.js Reference -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 
   <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key= AsJHeKGXP8aLdq8yvdYv4zwcbF_9EO6vzUyVyMLZlzSzG7Pmvj5yVqZcd1u9iZfS'
@@ -20,15 +22,9 @@
 
 <body>
 
-  <div class="container" text="centered">
-    <div class="jumbotron text-center bg-dark text-white">
-      <h1>Events Near You</h1>
-      <h2>Looking for something to do?</h2>
-  <p>Let Events Near You help you find not only the right event to attend but directions to the event address.</p>
-    </div>
-  </div>
-  
-  
+  <br>
+  <br>
+
   <section class="py-5">
 
     <div class="container">
@@ -48,13 +44,12 @@
       </div>
     </div>
 
-    <div class="container">
+    <div style="color: red;" class="container">
       <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-10">
-          <div id="no-results"></div>
-        </div>
+        <div class="col-md-12"></div>
+        <div id="no-results" style="padding-left: 500px;"></div>
       </div>
+    </div>
     </div>
 
 
@@ -83,7 +78,12 @@
         <thead class="thead-dark">
           <tr>
             <th scope="col" id="Event">Event</th>
-            <th scope="col" href id="URL">Event Information</th>
+            <th scope="col" href id="URL">URL</th>
+            <th scope="col" href id="address1">Address</th>
+            <th scope="col" href id="address2">City</th>
+            <th scope="col" href id="address2">State</th>
+            <th scope="col" href id="address2">Zip</th>
+
             <th scope="col" id="Start">Start Time</th>
             <th scope="col" id="End">End Time</th>
           </tr>
@@ -128,13 +128,13 @@
 
 
 
-
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
   <script type="text/javascript" src="javascript/app.js"></script>
   <script type="text/javascript" src="javascript/scriptSlider.js"></script>
+
 
 
 </body>

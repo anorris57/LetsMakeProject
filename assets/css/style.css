@@ -5,5 +5,7 @@
     width: 100%;  
    }
 
-
+#no-results {
+    color: red;
+}
 

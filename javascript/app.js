@@ -58,6 +58,11 @@ $(document).ready(function () {
           tRow.append(
             $("<td>").text(events[i].name.text),
             $("<td>").html("<a href=" + events[i].url + ">Link</a>"),
+            $("<td>").text(events[i].venue.address.address_1),
+            $("<td>").text(events[i].venue.address.city),
+            $("<td>").text(events[i].venue.address.region),
+            $("<td>").text(events[i].venue.address.postal_code),
+
             $("<td>").text(events[i].start.local),
             $("<td>").text(events[i].end.local),
           )
