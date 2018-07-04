@@ -62,6 +62,7 @@ $(document).ready(function () {
             $("<td>").text(events[i].venue.address.city),
             $("<td>").text(events[i].venue.address.region),
             $("<td>").text(events[i].venue.address.postal_code),
+
             $("<td>").text(events[i].start.local),
             $("<td>").text(events[i].end.local),
           )
