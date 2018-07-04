@@ -1,9 +1,13 @@
-
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
 
 #map-images {
-    height: 400px;  
-    width: 100%;  
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
    }
 
-
-
+#no-results {
+    color: red;
+}
