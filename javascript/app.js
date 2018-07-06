@@ -43,6 +43,7 @@ $(document).ready(function () {
     }).done(function (response) {
       // Okay, we have the results. We only care
       // about the events. Events is a list within the response
+      console.log(response);
       var events = response.events;
       var pagination = response.pagination;
 
@@ -51,24 +52,47 @@ $(document).ready(function () {
       // pieces of data to pull out. For now, we're only extracting
       // name, url, start and end times.
       for (var i = 0; i < 3; i++) {
-        if (pagination.object_count > 0) {
-          $("#no-results").remove();
+       if (pagination.object_count > 0) {
+        $("#no-results").hide();
           var tRow = $("<tr>");
-          var url = events[i].url
+          var startTime = events[i].start.local;
+          var endTime = events[i].end.local;
+ 
+          //CONVERT TIME OF EVENT TO PROPER FORMAT
+          var StartConverted = moment(startTime).format('YYYY-MM-DD HH:mm');
+          var EndConverted = moment(endTime).format('YYYY-MM-DD HH:mm');
+         var address = events[i].venue.address.address_1;
+         if( address === null) {
+           address = '';
+         }
+         var zip = events[i].venue.address.postal_code;
+         if( zip === null) {
+          zip = '';
+        }
+        var city = events[i].venue.address.city;
+        if (city === null) {
+          zip = "";
+        }
+        var region = events[i].venue.address.region;
+        if (region === null) {
+          region = "";
+        }
+
           tRow.append(
             $("<td>").text(events[i].name.text),
             $("<td>").html("<a href=" + events[i].url + ">Link</a>"),
-            $("<td>").text(events[i].venue.address.address_1),
-            $("<td>").text(events[i].venue.address.city),
-            $("<td>").text(events[i].venue.address.region),
-            $("<td>").text(events[i].venue.address.postal_code),
-            $("<td>").text(events[i].start.local),
-            $("<td>").text(events[i].end.local),
-          )
+            $("<td>").text(address),           
+            $("<td>").text(city),
+            $("<td>").text(region),
+            $("<td>").text(zip),
+            $("<td>").text(StartConverted),
+            $("<td>").text(EndConverted),
+         )
+
         }
-        else {
-          $("#no-results").text("*No Results Found");
-        }
+         else {
+          $("#no-results").show().text("*No Results Found");
+          }
         $("#eventTable").append(tRow);
       }
 

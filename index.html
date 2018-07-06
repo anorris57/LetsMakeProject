@@ -3,17 +3,20 @@
 
 <head>
     <title>Events Near You!</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key= AsJHeKGXP8aLdq8yvdYv4zwcbF_9EO6vzUyVyMLZlzSzG7Pmvj5yVqZcd1u9iZfS'
         async defer></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 
 <body>
@@ -25,7 +28,6 @@
             <p>Let Events Near You help you find not only the right event to attend but directions to the event address.</p>
         </div>
     </div>
-
 
     <section class="py-5">
 
@@ -54,7 +56,6 @@
             </div>
         </div>
 
-
         <div class="container">
             <form action="">
                 <div class="form-group">
@@ -73,14 +74,13 @@
         </div>
     </section>
 
-
     <section>
         <div class="container">
             <table class="table" id="eventTable">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col" id="Event">Event</th>
-                        <th scope="col" id="URL">URL</th>
+                        <th scope="col" id="URL">Event Information</th>
                         <th scope="col" id="address1">Address</th>
                         <th scope="col" id="address2">City</th>
                         <th scope="col" id="address2">State</th>
@@ -97,9 +97,6 @@
         </div>
     </section>
 
-
-
-
     <section>
         <div class="container">
             <div class="row">
@@ -110,7 +107,6 @@
                 <div class="col-sm-6" id="myMap"></div>
             </div>
         </div>
-
 
     </section>
     <br>
@@ -126,17 +122,12 @@
         <!-- /.container -->
     </footer>
 
-
-
-
-
-
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-    <script type="text/javascript" src="assets/javascript/scriptSlider.js"></script>
+    <script type="text/javascript" src="javascript/app.js"></script>
+    <script type="text/javascript" src="javascript/scriptSlider.js"></script>
 
 
 </body>
